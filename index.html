@@ -116,8 +116,9 @@
 
         // Get the PROLIFIC_PID from the URL
         const urlParams = new URLSearchParams(window.location.search);
-        const prolificPID = urlParams.get('PROLIFIC_PID');
-        const sessionNo = 1; // Replace with session number for multiple sessions
+        const prolificPID = urlParams.get('PROLIFIC_PID') || "UNKNOWN";
+        console.log(prolificPID);        
+        const sessionNo = 1 || 1; // Replace with session number for multiple sessions
 
         checkboxes.forEach(checkbox => {
             checkbox.addEventListener('change', () => {
